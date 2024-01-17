@@ -6,8 +6,9 @@ Compilar y Ejecutar Archivos Java
 2. **Compila el código fuente:**
    Abre una terminal y navega al directorio que contiene tu archivo `.java`. Ejecuta el siguiente comando para compilar:
 
+   ```bash
    javac HolaMundo.java
-
+   ```
 
    Esto generará un archivo `.class` con el bytecode.
 
