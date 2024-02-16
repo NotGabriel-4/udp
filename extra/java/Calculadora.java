@@ -1,35 +1,53 @@
 import java.util.Scanner;
 
 public class Calculadora {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Calculadora\n1.Suma:\n2.Resta:\n3.Multiplicación:\n4.División:");
-        int operacion;
-        operacion = scanner.nextInt();
 
-        int var1 = 0, var2 = 0;
-        switch (operacion) {
-            case 1:
-                System.out.println("Ingrese los numeros a sumar, ingrese 0 para terminar");
-                do {
-                    var1 = scanner.nextInt();
-                    var2 += var1;
-                } while (var1 != 0);
-                System.out.print(var2);
-                break;
+        double ans = 0, var1, var2;
+        char op;
 
-            case 2:
-                break;
+        var1 = scanner.nextDouble();
+        System.out.print("Operacion: ");
+        do {
 
-            case 3:
-                System.out.println("Multiplicación");
-                break;
+            op = scanner.next().charAt(0);
+            var2 = scanner.nextDouble();
 
-            case 4:
-                System.out.println("División");
-                break;
-        }
+            switch (op) {
+                case '+':
+                    ans = var1 + var2;
+                    break;
+                case '-':
+                    ans = var1 - var2;
+                    break;
+
+                case '*':
+                    ans = var1 * var2;
+                    break;
+                case '/':
+
+                    if (var2 == 0) {
+                        System.err.println("Division por 0");
+                        break;
+                    } else {
+                        ans = var1 / var2;
+                    }
+                    break;
+            }
+
+            var1 = ans;
+            System.out.print("Pensando");
+            for(int i = 0; i < 19; i++)
+            {
+                Thread.sleep(500);
+                System.out.print(".");
+            }
+
+            System.out.println("\nHola Mundo");
+            System.out.println("© Gabriel - 2024");
+
+        } while (op != 'e');
         scanner.close();
     }
 }
