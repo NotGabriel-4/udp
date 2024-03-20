@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class conteonum {
+public class num_mayor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
