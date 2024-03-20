@@ -14,7 +14,7 @@ public class palindromo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String palabra = scanner.nextLine();
+        String palabra = scanner.nextLine().toLowerCase().replaceAll("\s","");
         check(palabra);
 
         if (check(palabra)) {
