@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class palindromo {
+public class Palindromo {
 
     public static boolean check(String palabra) {
         for (int i = 0; i < palabra.length() / 2; i++) {
